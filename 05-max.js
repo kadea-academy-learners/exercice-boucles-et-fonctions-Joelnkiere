@@ -11,10 +11,13 @@
   Placeholder : levée d'erreur pour indiquer que l'exercice doit être implémenté.
 */
 function max(a, b) {
-  // Exercice non implémenté : retourner le plus grand ou un message si égaux
-  // Placeholder neutre : retourne null pour indiquer non-implémentation
-  return null;
+  if(typeof a !='number'||typeof b!="number"|| isNaN (a)|| isNaN(b)){
+    return null;
+  }
+  return a===b ? "Les deux nombres sont égaux": a>b? a:b;
+
 }
+max(6,4)
 
 // Ne pas modifier la ligne ci-dessous
 module.exports = { max }

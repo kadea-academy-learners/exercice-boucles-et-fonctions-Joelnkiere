@@ -11,10 +11,15 @@
   Placeholder : levée d'erreur pour indiquer que l'exercice doit être implémenté.
 */
 function estImpair(n) {
-  // Exercice non implémenté : vérifier si n est impair
-  // Placeholder neutre : retourne null pour indiquer non-implémentation
-  return null;
+  if(typeof(n)!='number' ||isNaN(n))  return null;
+  if(n%2===0){
+    return false
+  }else if(n%2!==0){
+    return true
+  }
+
 }
+estImpair(5)
 
 // Ne pas modifier la ligne ci-dessous
 module.exports = { estImpair };
